@@ -1,0 +1,9 @@
+.custom-hidden {
+    border: none;
+    padding: none;
+    margin: none;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}

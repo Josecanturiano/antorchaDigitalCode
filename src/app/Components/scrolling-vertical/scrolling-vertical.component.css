@@ -1,0 +1,29 @@
+body {
+  padding: 2rem 0rem;
+}
+
+.image-parent {
+  width: 100%;
+  object-fit: cover;
+}
+
+.vertical-menu {
+  width: 100%;
+  height: 80vh;
+  overflow-y: auto;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/assets/imgs/source.gif") no-repeat center;
+}

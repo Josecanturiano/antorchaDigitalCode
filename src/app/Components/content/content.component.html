@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="d-flex flex-column">
+    <div *ngIf="generals.length === 0">
+      <h1>No hay resultados</h1>
+    </div>
+    <div *ngIf="generals.length > 0">
+      <div class="bg-white jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1>{{ title ? (title | titlecase) : ("General" | titlecase) }}</h1>
+          <hr />
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <img
+                [src]="
+                  generals[0].urlToImage === undefined
+                    ? noImg
+                    : generals[0].urlToImage
+                "
+                class="img-fluid"
+                alt="Responsive image"
+              />
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <p class="h3">{{ generals[0].title }}</p>
+              <p class="">{{ generals[0].content }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-columns">
+        <div
+          class="card border-0 cursor-pointer"
+          *ngFor="let item of generals; let i = index"
+          (click)="details(i)"
+        >
+          <img
+            class="card-img-top"
+            [src]="item.urlToImage === undefined ? noImg : item.urlToImage"
+            alt="Card image cap "
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ item.title }}</h5>
+            <p class="card-text">{{ item.content }}</p>
+          </div>
+          <hr />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

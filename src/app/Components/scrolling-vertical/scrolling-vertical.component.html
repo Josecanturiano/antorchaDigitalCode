@@ -1,0 +1,28 @@
+<h6 class="text-muted">Mas noticias!</h6>
+<div *ngIf="data.length > 0">
+  <div class="row full-width vertical-menu">
+    <ul
+      class="list-group full-width cursor-pointer"
+      *ngFor="let item of data; let i = index"
+      (click)="details(i)"
+    >
+      <li
+        class="list-group-item d-flex justify-content-between align-items-center"
+      >
+        <div class="col-8">
+          {{ item.title }}
+        </div>
+        <div class="image-parent col-4">
+          <img
+            [src]="item.urlToImage === undefined ? noImg : item.urlToImage"
+            class="img-fluid"
+            alt="quixote"
+          />
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<div *ngIf="data.length === 0" class="d-flex justify-content-center">
+  <div style="width: 3rem; height: 3rem" class="spinner-border"></div>
+</div>

@@ -1,0 +1,20 @@
+<div class="scrollmenu">
+  <a
+    *ngFor="let item of category; let i = index"
+    routerLink="/home/{{ item }}"
+    [routerLinkActive]="['active']"
+    >{{ categoryView[i] | titlecase }}</a
+  >
+  <a
+    *ngFor="let item of category; let i = index"
+    routerLink="/home/{{ item }}"
+    [routerLinkActive]="['active']"
+    >{{ categoryView[i] | titlecase }}</a
+  >
+  <a
+    *ngFor="let item of category; let i = index"
+    routerLink="/home/{{ item }}"
+    [routerLinkActive]="['active']"
+    >{{ categoryView[i] | titlecase }}</a
+  >
+</div>

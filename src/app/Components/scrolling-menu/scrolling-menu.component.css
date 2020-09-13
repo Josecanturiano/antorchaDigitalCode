@@ -1,0 +1,54 @@
+div.scrollmenu {
+    background-color: rgb(184, 0, 0);
+    overflow: auto;
+    white-space: nowrap;
+    border: solid white;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+
+div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+.active {
+    color: white;
+    border: solid white;
+    border-top-width: 0px;
+    border-bottom-width: 3px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+
+div.scrollmenu a:hover {
+    background-color: rgb(184, 0, 0);
+    color: white;
+    border: solid white;
+    border-top-width: 0px;
+    border-bottom-width: 3px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+
+div.scrollmenu::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Hide scrollbar for IE, Edge and Firefox */
+
+div.scrollmenu {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
